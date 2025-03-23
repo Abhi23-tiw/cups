@@ -1,0 +1,568 @@
+Tests started at ...
+MIME database types:
+	application/octet-stream (100):
+
+	application/pdf (100):
+	[0x55eb28e19b90] OR (
+		[0x55eb28e19c10] match(*.pdf)
+		[0x55eb28e19c90] 
+	)
+
+	application/postscript (100):
+	[0x55eb28e1ade0] OR (
+		[0x55eb28e1ae60] match(*.ai)
+		[0x55eb28e1aee0] match(*.eps)
+		[0x55eb28e1af60] match(*.ps)
+		[0x55eb28e1afe0] string(0,%!)
+		[0x55eb28e1b060] string(0,<04>%!)
+		[0x55eb28e1b160] AND (
+			[0x55eb28e1b0e0] contains(0,128,<1B>%-12345X)
+			[0x55eb28e1b1e0] OR (
+				[0x55eb28e1b260] contains(0,8192,LANGUAGE=POSTSCRIPT)
+				[0x55eb28e1b2e0] contains(0,8192,LANGUAGE = Postscript)
+				[0x55eb28e1b360] contains(0,8192,LANGUAGE = PostScript)
+				[0x55eb28e1b3e0] contains(0,8192,LANGUAGE = POSTSCRIPT)
+				[0x55eb28e1b460] AND (
+					[0x55eb28e1b4e0] contains(0,8192,<0A>%!)
+					[0x55eb28e1b560] NOT contains(0,8192,ENTER LANGUAGE)
+				)
+			)
+		)
+	)
+
+	application/rss+xml (100):
+	[0x55eb28e202a0] OR (
+		[0x55eb28e20320] match(*.rss)
+	)
+
+	application/vnd.cups-banner (100):
+	[0x55eb28e203e0] OR (
+		[0x55eb28e20460] string(0,#CUPS-BANNER)
+	)
+
+	application/vnd.cups-command (100):
+	[0x55eb28e20520] OR (
+		[0x55eb28e205a0] string(0,#CUPS-COMMAND)
+	)
+
+	application/vnd.cups-pdf (100):
+
+	application/vnd.cups-postscript (100):
+
+	application/vnd.cups-ppd (100):
+	[0x55eb28e208f0] OR (
+		[0x55eb28e20970] match(*.ppd)
+		[0x55eb28e209f0] string(0,*PPD-Adobe:)
+	)
+
+	application/vnd.cups-raster (100):
+	[0x55eb28e20ab0] OR (
+		[0x55eb28e20b30] string(0,RaSt)
+		[0x55eb28e20bb0] string(0,tSaR)
+		[0x55eb28e20c30] AND (
+			[0x55eb28e20cb0] string(0,RaS2)
+			[0x55eb28e20d30] NOT string(4,PwgRaster<00>)
+		)
+		[0x55eb28e20db0] string(0,2SaR)
+		[0x55eb28e20e30] string(0,RaS3)
+		[0x55eb28e20eb0] string(0,3SaR)
+	)
+
+	application/vnd.cups-raw (100):
+	[0x55eb28e20f70] AND (
+		[0x55eb28e20ff0] string(0,<1B>E)
+		[0x55eb28e21070] NOT string(2,<1B>%0B)
+	)
+	[0x55eb28e210f0] string(0,<1B>@)
+	[0x55eb28e21170] AND (
+		[0x55eb28e211f0] contains(0,128,<1B>%-12345X)
+		[0x55eb28e21270] OR (
+			[0x55eb28e212f0] contains(0,8192,LANGUAGE=PCL)
+			[0x55eb28e21370] contains(0,8192,LANGUAGE = PCL)
+		)
+	)
+
+	application/x-cshell (100):
+	[0x55eb28e1e5c0] OR (
+		[0x55eb28e1e640] match(*.csh)
+		[0x55eb28e1e740] AND (
+			[0x55eb28e1e6c0] printable(0,1024)
+			[0x55eb28e1e7c0] string(0,#!)
+			[0x55eb28e1e840] OR (
+				[0x55eb28e1e8c0] contains(2,80,/csh)
+				[0x55eb28e1e940] contains(2,80,/tcsh)
+			)
+		)
+	)
+
+	application/x-csource (100):
+	[0x55eb28e1f260] OR (
+		[0x55eb28e1f2e0] match(*.c)
+		[0x55eb28e1f360] match(*.cxx)
+		[0x55eb28e1f3e0] match(*.cpp)
+		[0x55eb28e1f460] match(*.cc)
+		[0x55eb28e1f4e0] match(*.C)
+		[0x55eb28e1f560] match(*.h)
+		[0x55eb28e1f5e0] match(*.hpp)
+		[0x55eb28e1f6e0] AND (
+			[0x55eb28e1f660] printable(0,1024)
+			[0x55eb28e1f760] NOT match(*.css)
+			[0x55eb28e1f7e0] OR (
+				[0x55eb28e1f860] string(0,/*)
+				[0x55eb28e1f8e0] string(0,//)
+				[0x55eb28e1f960] string(0,#include)
+				[0x55eb28e1f9e0] contains(0,1024,<0A>#include)
+				[0x55eb28e1fa60] string(0,#define)
+				[0x55eb28e1fae0] contains(0,1024,<0A>#define)
+			)
+		)
+	)
+
+	application/x-httpd-cgi (100):
+	[0x55eb28e21470] OR (
+		[0x55eb28e214f0] match(*.cgi)
+		[0x55eb28e21570] match(*.php)
+	)
+
+	application/x-perl (100):
+	[0x55eb28e1e9f0] OR (
+		[0x55eb28e1ea70] match(*.pl)
+		[0x55eb28e1eb70] AND (
+			[0x55eb28e1eaf0] printable(0,1024)
+			[0x55eb28e1ebf0] string(0,#!)
+			[0x55eb28e1ec70] contains(2,80,/perl)
+		)
+	)
+
+	application/x-shell (100):
+	[0x55eb28e1ed20] OR (
+		[0x55eb28e1eda0] match(*.sh)
+		[0x55eb28e1eea0] AND (
+			[0x55eb28e1ee20] printable(0,1024)
+			[0x55eb28e1ef20] string(0,#!)
+			[0x55eb28e1efa0] OR (
+				[0x55eb28e1f020] contains(2,80,/bash)
+				[0x55eb28e1f0a0] contains(2,80,/ksh)
+				[0x55eb28e1f120] contains(2,80,/sh)
+				[0x55eb28e1f1a0] contains(2,80,/zsh)
+			)
+		)
+	)
+
+	image/gif (100):
+	[0x55eb28e1b610] OR (
+		[0x55eb28e1b690] match(*.gif)
+		[0x55eb28e1b710] string(0,GIF87a)
+		[0x55eb28e1b790] string(0,GIF89a)
+	)
+
+	image/jpeg (100):
+	[0x55eb28e1b9f0] OR (
+		[0x55eb28e1ba70] match(*.jpeg)
+		[0x55eb28e1baf0] match(*.jpg)
+		[0x55eb28e1bb70] match(*.jpe)
+		[0x55eb28e1bc70] AND (
+			[0x55eb28e1bbf0] string(0,<FFFFFFFF><FFFFFFD8><FFFFFFFF>)
+			[0x55eb28e1bcf0] OR (
+				[0x55eb28e1bd70] char(3,224)
+				[0x55eb28e1bdf0] char(3,225)
+				[0x55eb28e1be70] char(3,226)
+				[0x55eb28e1bef0] char(3,227)
+				[0x55eb28e1bf70] char(3,228)
+				[0x55eb28e1bff0] char(3,229)
+				[0x55eb28e1c070] char(3,230)
+				[0x55eb28e1c0f0] char(3,231)
+				[0x55eb28e1c170] char(3,232)
+				[0x55eb28e1c1f0] char(3,233)
+				[0x55eb28e1c270] char(3,234)
+				[0x55eb28e1c2f0] char(3,235)
+				[0x55eb28e1c370] char(3,236)
+				[0x55eb28e1c3f0] char(3,237)
+				[0x55eb28e1c470] char(3,238)
+				[0x55eb28e1c4f0] char(3,239)
+			)
+		)
+	)
+
+	image/png (100):
+	[0x55eb28e1b840] OR (
+		[0x55eb28e1b8c0] match(*.png)
+		[0x55eb28e1b940] string(0,<FFFFFF89>PNG)
+	)
+
+	image/pwg-raster (150):
+	[0x55eb28e1c5b0] AND (
+		[0x55eb28e1c630] string(0,RaS2)
+		[0x55eb28e1c6b0] string(4,PwgRaster<00>)
+	)
+
+	image/tiff (100):
+	[0x55eb28e1c760] OR (
+		[0x55eb28e1c7e0] match(*.tiff)
+		[0x55eb28e1c860] match(*.tif)
+		[0x55eb28e1c8e0] string(0,MM<00>*)
+		[0x55eb28e1c960] string(0,II*<00>)
+	)
+
+	image/urf (100):
+	[0x55eb28e1dde0] OR (
+		[0x55eb28e1de60] match(*.urf)
+		[0x55eb28e1dee0] string(0,UNIRAST<00>)
+	)
+
+	image/x-alias (100):
+	[0x55eb28e1df90] OR (
+		[0x55eb28e1e010] match(*.pix)
+		[0x55eb28e1e090] short(8,8)
+		[0x55eb28e1e110] short(8,24)
+	)
+
+	image/x-bitmap (100):
+	[0x55eb28e1e1d0] OR (
+		[0x55eb28e1e250] match(*.bmp)
+		[0x55eb28e1e350] AND (
+			[0x55eb28e1e2d0] string(0,BM)
+			[0x55eb28e1e3d0] NOT printable(2,14)
+		)
+	)
+
+	image/x-icon (100):
+	[0x55eb28e1e480] OR (
+		[0x55eb28e1e500] match(*.ico)
+	)
+
+	image/x-photocd (100):
+	[0x55eb28e1ca20] OR (
+		[0x55eb28e1caa0] match(*.pcd)
+		[0x55eb28e1cb20] string(2048,PCD_IPI)
+	)
+
+	image/x-portable-anymap (100):
+	[0x55eb28e1cbe0] OR (
+		[0x55eb28e1cc60] match(*.pnm)
+	)
+
+	image/x-portable-bitmap (100):
+	[0x55eb28e1cd20] OR (
+		[0x55eb28e1cda0] match(*.pbm)
+		[0x55eb28e1ce20] string(0,P1)
+		[0x55eb28e1cea0] string(0,P4)
+	)
+
+	image/x-portable-graymap (100):
+	[0x55eb28e1cf60] OR (
+		[0x55eb28e1cfe0] match(*.pgm)
+		[0x55eb28e1d060] string(0,P2)
+		[0x55eb28e1d0e0] string(0,P5)
+	)
+
+	image/x-portable-pixmap (100):
+	[0x55eb28e1d1a0] OR (
+		[0x55eb28e1d220] match(*.ppm)
+		[0x55eb28e1d2a0] string(0,P3)
+		[0x55eb28e1d320] string(0,P6)
+	)
+
+	image/x-sgi-rgb (100):
+	[0x55eb28e1d3e0] OR (
+		[0x55eb28e1d460] match(*.rgb)
+		[0x55eb28e1d4e0] match(*.sgi)
+		[0x55eb28e1d560] match(*.bw)
+		[0x55eb28e1d5e0] match(*.icon)
+		[0x55eb28e1d660] short(0,474)
+	)
+
+	image/x-sun-raster (100):
+	[0x55eb28e1db20] OR (
+		[0x55eb28e1dba0] match(*.ras)
+		[0x55eb28e1dc20] string(0,Y<FFFFFFA6>j<FFFFFF95>)
+	)
+
+	image/x-xbitmap (100):
+	[0x55eb28e1d720] OR (
+		[0x55eb28e1d7a0] match(*.xbm)
+	)
+
+	image/x-xpixmap (100):
+	[0x55eb28e1d860] OR (
+		[0x55eb28e1d8e0] match(*.xpm)
+		[0x55eb28e1d9e0] AND (
+			[0x55eb28e1d960] ascii(0,1024)
+			[0x55eb28e1da60] string(3,XPM)
+		)
+	)
+
+	text/css (100):
+	[0x55eb28e20170] OR (
+		[0x55eb28e201f0] match(*.css)
+	)
+
+	text/html (100):
+	[0x55eb28e1fb90] OR (
+		[0x55eb28e1fc10] match(*.html)
+		[0x55eb28e1fc90] match(*.htm)
+		[0x55eb28e1fd90] AND (
+			[0x55eb28e1fd10] printable(0,1024)
+			[0x55eb28e1fe10] OR (
+				[0x55eb28e1fe90] 
+				[0x55eb28e1ff10] 
+			)
+		)
+	)
+
+	text/plain (100):
+	[0x55eb28e1ffc0] OR (
+		[0x55eb28e20040] match(*.txt)
+		[0x55eb28e200c0] printable(0,1024)
+	)
+
+
+MIME database filters:
+	application/octet-stream to application/vnd.cups-raw: - (0)
+	application/postscript to application/vnd.cups-postscript: pstops (66)
+	application/vnd.cups-raster to image/pwg-raster: rastertopwg (100)
+	application/vnd.cups-raster to image/urf: rastertopwg (100)
+../doc/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/Makefile: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/da/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/da/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/cups.css: text/css
+    No filters to convert application/vnd.cups-postscript.
+../doc/test.php: application/x-httpd-cgi
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-postscript-chain.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/sample-image.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/raster-organization.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-command-chain.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/generic.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-postscript-chain.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-block-diagram.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/smiley.jpg: image/jpeg
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-block-diagram.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/raster.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/wait.gif: image/gif
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-command-chain.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-raster-chain.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/raster-organization.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups-raster-chain.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/raster.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/images/cups.svg: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/robots.txt: text/plain
+    No filters to convert application/vnd.cups-postscript.
+../doc/pt_BR/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/pt_BR/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/de/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/de/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/es/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/es/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/cups-printable.css: text/css
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/security.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-printers.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-client.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpq.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ipptool.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-notifier.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/api-filter.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ipptoolfile.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsctl.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/accounting.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-mailto.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/options.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpc.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/network.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ppdi.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsenable.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-ipp.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cancel.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-classes.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-banner.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsd.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ippeveprinter.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/api-admin.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/admin.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups-snmp.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsd.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/raster-driver.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/encryption.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/cupspm.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/postscript-driver.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/overview.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-command.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lp.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ppdhtml.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/sharing.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupstestppd.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups-oauth.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ippevepcl.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/cgi.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpmove.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-mime.convs.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/kerberos.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/glossary.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ppdpo.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ppdcfile.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpinfo.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-design.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpoptions.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-mime.types.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsfilter.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups-lpd.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsd-logs.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsd-helper.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ppdmerge.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpadmin.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-filter.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/license.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/policies.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups-snmp.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cupsaccept.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups-files.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpstat.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/ref-ppdcfile.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/translation.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-raster.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-backend.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-subscriptions.conf.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lpr.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/ppd-compiler.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ippfind.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-ppdc.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/cupspm.epub: unknown
+../doc/help/api-ppd.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-stp.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/spec-ppd.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/firewalls.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-lprm.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/help/man-cups-x509.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/test.cgi: application/x-httpd-cgi
+    No filters to convert application/vnd.cups-postscript.
+../doc/ru/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/ru/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/fr/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/fr/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/apple-touch-icon.png: image/png
+    No filters to convert application/vnd.cups-postscript.
+../doc/pl/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/pl/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/ja/index.html.in: text/html
+    No filters to convert application/vnd.cups-postscript.
+../doc/ja/index.html: text/html
+    No filters to convert application/vnd.cups-postscript.
+Tests finished at ...

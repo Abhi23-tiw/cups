@@ -1,0 +1,64 @@
+execve("./fuzz_cupsd", ["./fuzz_cupsd", "afl_inputs/sample1.ipp"], 0x7fff77242db0 /* 36 vars */) = 0 <0.001018>
+brk(NULL)                               = 0x555865402000 <0.000056>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa62e6f9000 <0.000068>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory) <0.000055>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/glibc-hwcaps/x86-64-v4/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000187>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/glibc-hwcaps/x86-64-v4/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000178>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000133>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/glibc-hwcaps/x86-64-v3/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000287>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000081>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/glibc-hwcaps/x86-64-v2/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000143>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000059>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/cups/", {st_mode=S_IFDIR|0775, st_size=12288, ...}, 0) = 0 <0.000076>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/glibc-hwcaps/x86-64-v4/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000120>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/glibc-hwcaps/x86-64-v4/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000051>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000061>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/glibc-hwcaps/x86-64-v3/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000043>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000039>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/glibc-hwcaps/x86-64-v2/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000030>
+openat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000039>
+newfstatat(AT_FDCWD, "/home/abhishrestha/gsoc24/cups/libcups/.libs/", 0x7fff1b284310, 0) = -1 ENOENT (No such file or directory) <0.000035>
+openat(AT_FDCWD, "glibc-hwcaps/x86-64-v4/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000033>
+openat(AT_FDCWD, "glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000037>
+openat(AT_FDCWD, "glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000038>
+openat(AT_FDCWD, "libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory) <0.000049>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000047>
+fstat(3, {st_mode=S_IFREG|0644, st_size=28855, ...}) = 0 <0.000084>
+mmap(NULL, 28855, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fa62e6f1000 <0.000046>
+close(3)                                = 0 <0.000039>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000045>
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832 <0.000046>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000040>
+fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0 <0.000033>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000038>
+mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fa62e4df000 <0.000040>
+mmap(0x7fa62e507000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fa62e507000 <0.000112>
+mmap(0x7fa62e68f000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x7fa62e68f000 <0.000116>
+mmap(0x7fa62e6de000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x7fa62e6de000 <0.000052>
+mmap(0x7fa62e6e4000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fa62e6e4000 <0.000115>
+close(3)                                = 0 <0.000111>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa62e4dc000 <0.000046>
+arch_prctl(ARCH_SET_FS, 0x7fa62e4dc780) = 0 <0.000035>
+set_tid_address(0x7fa62e4dca50)         = 104566 <0.000033>
+set_robust_list(0x7fa62e4dca60, 24)     = 0 <0.000058>
+rseq(0x7fa62e4dd0a0, 0x20, 0, 0x53053053) = 0 <0.000034>
+mprotect(0x7fa62e6de000, 16384, PROT_READ) = 0 <0.000123>
+mprotect(0x5558452c7000, 4096, PROT_READ) = 0 <0.000126>
+mprotect(0x7fa62e731000, 8192, PROT_READ) = 0 <0.000088>
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0 <0.000038>
+munmap(0x7fa62e6f1000, 28855)           = 0 <0.000050>
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000034>
+rt_sigaction(SIGTERM, {sa_handler=0x5558452c4e40, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa62e524330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000036>
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[CHLD], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fa62e524330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000036>
+write(199, "\1LFA", 4)                  = -1 EBADF (Bad file descriptor) <0.000036>
+openat(AT_FDCWD, "afl_inputs/sample1.ipp", O_RDONLY) = 3 <0.000045>
+read(3, "\2\0\1\1", 4096)               = 4 <0.000064>
+close(3)                                = 0 <0.000042>
+socket(AF_INET, SOCK_STREAM, IPPROTO_IP) = 3 <0.000057>
+connect(3, {sa_family=AF_INET, sin_port=htons(631), sin_addr=inet_addr("0.0.0.0")}, 16) = 0 <0.000253>
+write(3, "POST / HTTP/1.1\r\nHost: localhost"..., 86) = 86 <0.000062>
+write(3, "\2\0\1\1", 4)                 = 4 <0.000051>
+read(3, "HTTP/1.1 400 Bad Request\r\nConnec"..., 1024) = 653 <15.820177>
+close(3)                                = 0 <0.000189>
+exit_group(0)                           = ?
++++ exited with 0 +++

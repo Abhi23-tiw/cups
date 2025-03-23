@@ -1,0 +1,6 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=./cups_harness
+AFL_CUSTOM_INFO_PROGRAM_ARGV=@@afl-fuzz -i input_corpus -o output_corpus -S fuzzer3 -t 500 -x ipp.dict -- ./cups_harness @@afl-fuzz -i input_corpus -o output_corpus -S fuzzer3 -t 500 -x ipp.dict -- ./cups_harness @@clear
+AFL_CUSTOM_INFO_OUT=output_corpus/fuzzer3
+# command line:
+'afl-fuzz' '-i' 'input_corpus' '-o' 'output_corpus' '-S' 'fuzzer3' '-t' '500' '-x' 'ipp.dict' '--' './cups_harness' '@@afl-fuzz' '-i' 'input_corpus' '-o' 'output_corpus' '-S' 'fuzzer3' '-t' '500' '-x' 'ipp.dict' '--' './cups_harness' '@@afl-fuzz' '-i' 'input_corpus' '-o' 'output_corpus' '-S' 'fuzzer3' '-t' '500' '-x' 'ipp.dict' '--' './cups_harness' '@@clear'

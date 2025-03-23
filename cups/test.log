@@ -1,0 +1,605 @@
+Tests started at Wed Mar 19 03:40:42 UTC 2025...
+cupsArrayNew3: PASS
+cupsArrayGetUserData: PASS
+cupsArrayAdd: PASS
+cupsArrayGetCount: PASS
+cupsArrayGetFirst: PASS
+cupsArrayGetNext: PASS
+cupsArrayGetLast: PASS
+cupsArrayGetPrev: PASS
+cupsArrayFind: PASS
+cupsArrayGetCurrent: PASS
+cupsArrayDup: PASS
+cupsArrayRemove: PASS
+cupsArrayClear: PASS
+Load unique words: -\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|PASS (47274 words in 0.214 seconds - 221082 words/sec)
+Delete While Iterating: PASS
+cupsArraySave: PASS
+cupsArrayRestore: PASS
+cupsArrayNewStrings(" \t\nfoo bar\tboo\nfar", ' '): PASS
+cupsArrayAddStrings(array, "foo2,bar2", ','): PASS
+cupsArrayNewStrings("{value='foo'},{value="bar"}", ','): PASS
+cupsGetClock(initial): PASS (0)
+cupsGetClock(1 second): PASS (1.00019)
+cupsGetClock(5 seconds): PASS (5.00062)
+cupsGetClock(10 seconds): PASS (10.0008)
+cupsGetClock(30 seconds): PASS (30.0009)
+cupsGetClock(60 seconds): PASS (60.0012)
+cupsGetClock(120 seconds): PASS (120.001)
+cupsFileOpen(write): PASS
+cupsFileIsCompressed(): PASS
+cupsFilePuts(): PASS
+cupsFilePrintf(): PASS
+cupsFilePutChar(): PASS
+cupsFileWrite(): PASS
+cupsFilePuts("partial line"): PASS
+cupsFileTell(): PASS
+cupsFileClose(): PASS
+cupsFileOpen(read): PASS
+cupsFileGets(): PASS
+cupsFileIsCompressed(): PASS
+cupsFileGetConf(): PASS
+cupsFileGetChar(): PASS
+cupsFileRead(): PASS
+cupsFileGetChar(partial line): PASS
+cupsFileTell(): PASS
+cupsFileClose(): PASS
+cupsFileOpen(write compressed): PASS
+cupsFileIsCompressed(): PASS
+cupsFilePuts(): PASS
+cupsFilePrintf(): PASS
+cupsFilePutChar(): PASS
+cupsFileWrite(): PASS
+cupsFilePuts("partial line"): PASS
+cupsFileTell(): PASS
+cupsFileClose(): PASS
+cupsFileOpen(read): PASS
+cupsFileGets(): PASS
+cupsFileIsCompressed(): PASS
+cupsFileGetConf(): PASS
+cupsFileGetChar(): PASS
+cupsFileRead(): PASS
+cupsFileGetChar(partial line): PASS
+cupsFileTell(): PASS
+cupsFileClose(): PASS
+cupsFileOpen(append 0): PASS
+cupsFileTell(): PASS
+cupsFileWrite(256 512-byte records): PASS
+cupsFileTell(): PASS
+cupsFileOpen(read 0): PASS
+cupsFileSeek(), cupsFileRead(): PASS
+cupsFileOpen(append 1): PASS
+cupsFileTell(): PASS
+cupsFileWrite(256 512-byte records): PASS
+cupsFileTell(): PASS
+cupsFileOpen(read 1): PASS
+cupsFileSeek(), cupsFileRead(): PASS
+cupsFileOpen(append 2): PASS
+cupsFileTell(): PASS
+cupsFileWrite(256 512-byte records): PASS
+cupsFileTell(): PASS
+cupsFileOpen(read 2): PASS
+cupsFileSeek(), cupsFileRead(): PASS
+cupsFileOpen(append 3): PASS
+cupsFileTell(): PASS
+cupsFileWrite(256 512-byte records): PASS
+cupsFileTell(): PASS
+cupsFileOpen(read 3): PASS
+cupsFileSeek(), cupsFileRead(): PASS
+cupsFileOpenFd(fd, "r"): PASS
+cupsFileClose(no read): PASS
+cupsFileOpen("testfile.txt", "r"): PASS
+cupsFileGets: PASS
+cupsFileRewind: PASS
+cupsFileGets: PASS
+cupsFileFind: PASS (/bin/cat)
+mkdir("test.d"): PASS
+cupsDirOpen(test.d): PASS
+cupsDirRead: PASS
+cupsFileOpen(test.d/testfile0.txt): PASS
+cupsFileOpen(test.d/testfile1.txt): PASS
+cupsFileOpen(test.d/testfile2.txt): PASS
+cupsFileOpen(test.d/testfile3.txt): PASS
+cupsFileOpen(test.d/testfile4.txt): PASS
+cupsFileOpen(test.d/testfile5.txt): PASS
+cupsFileOpen(test.d/testfile6.txt): PASS
+cupsFileOpen(test.d/testfile7.txt): PASS
+cupsFileOpen(test.d/testfile8.txt): PASS
+cupsFileOpen(test.d/testfile9.txt): PASS
+cupsDirOpen(test.d): PASS
+cupsDirRead: Got 'testfile4.txt'...
+cupsDirRead: Got 'testfile9.txt'...
+cupsDirRead: Got 'testfile3.txt'...
+cupsDirRead: Got 'testfile2.txt'...
+cupsDirRead: Got 'testfile6.txt'...
+cupsDirRead: Got 'testfile8.txt'...
+cupsDirRead: Got 'testfile5.txt'...
+cupsDirRead: Got 'testfile1.txt'...
+cupsDirRead: Got 'testfile0.txt'...
+cupsDirRead: Got 'testfile7.txt'...
+cupsDirRead: PASS
+cupsFormDecode(""): PASS
+cupsFormEncode(0 pairs): PASS
+cupsFormDecode("name=value"): PASS
+cupsFormEncode(1 pairs): PASS
+cupsFormDecode("name=value&name%5F2=value+2&third=3%2E1415926535"): PASS
+cupsFormEncode(3 pairs): PASS
+cupsFormDecode("bogus"): PASS
+cupsFormDecode("bogus=foo=bar"): PASS
+cupsFormDecode("nul=%00"): PASS
+cupsFormDecode("http://www.example.com:8080/userinfo?name=value&name%5F2=value+2&third=3%2E1415926535"): PASS
+cupsFormEncode(3 pairs): PASS
+cupsFormDecode("https://www.example.com/?name=value&name%5F2=value+2&third=3%2E1415926535"): PASS
+cupsFormEncode(3 pairs): PASS
+httpGetDateString2()/httpGetDateTime(): PASS
+httpDecode64_3()/httpEncode64_3(): PASS
+httpGetHostname(): PASS (chaturpinki.)
+httpAddrGetList(chaturpinki.): PASS (1 address(es) for chaturpinki.)
+httpSeparateURI(): PASS (44 URIs tested)
+httpAssembleURI(): PASS (16 URIs tested)
+httpAssembleUUID: PASS (urn:uuid:3be655aa-e3bb-304e-6241-1d0f94328f29)
+Create Sample Request: PASS
+Write Sample to Memory: PASS
+Read Sample from Memory: PASS
+ippFindAttribute(media-col): PASS
+ippFindAttribute(media-size 1): PASS
+ippFindAttribute(media-size 2): PASS
+ippFindAttribute(media-col/media-size/x-dimension): PASS
+ippFindNextAttribute(media-col/media-size/x-dimension): PASS
+ippFindNextAttribute(media-col/media-size/x-dimension) again: PASS
+Read Bad Collection from Memory: PASS
+Read Mixed integer/rangeOfInteger from Memory: PASS
+ippFindAttribute(notify-lease-duration-supported): PASS
+_ippFindOption("printer-type"): PASS
+cupsUTF8ToUTF32 of utfdemo.txt: PASS
+cupsUTF8ToCharset(CUPS_EUC_JP) of utfdemo.txt: PASS
+cupsUTF8ToCharset(CUPS_ISO8859_1): PASS
+cupsCharsetToUTF8(CUPS_ISO8859_1): PASS
+cupsUTF8ToCharset(CUPS_ISO8859_7): PASS
+cupsCharsetToUTF8(CUPS_ISO8859_7): PASS
+cupsUTF8ToCharset(CUPS_WINDOWS_932): PASS
+cupsCharsetToUTF8(CUPS_WINDOWS_932): PASS
+cupsUTF8ToCharset(CUPS_EUC_JP): PASS
+cupsUTF8ToCharset(CUPS_WINDOWS_950): PASS
+cupsCharsetToUTF8(CUPS_WINDOWS_950): PASS
+cupsUTF8ToCharset(CUPS_EUC_TW): PASS
+cupsCharsetToUTF8(CUPS_EUC_TW): PASS
+cupsJSONNew(root object): PASS
+cupsJSONGetCount(root): PASS (0)
+cupsJSONGetType(root): PASS (CUPS_JTYPE_OBJECT)
+cupsJSONNewKey('string'): PASS
+cupsJSONGetType(key): PASS (CUPS_JTYPE_KEY)
+cupsJSONNewString('value'): PASS
+cupsJSONGetType(string): PASS (CUPS_JTYPE_STRING)
+cupsJSONNewKey('number'): PASS
+cupsJSONNewNumber(42): PASS
+cupsJSONGetType(number): PASS (CUPS_JTYPE_NUMBER)
+cupsJSONNewKey('null'): PASS
+cupsJSONNew(null): PASS
+cupsJSONGetType(null): PASS (CUPS_JTYPE_NULL)
+cupsJSONNewKey('false'): PASS
+cupsJSONNew(false): PASS
+cupsJSONGetType(false): PASS (CUPS_JTYPE_FALSE)
+cupsJSONNewKey('true'): PASS
+cupsJSONNew(true): PASS
+cupsJSONGetType(true): PASS (CUPS_JTYPE_TRUE)
+cupsJSONNewKey('array'): PASS
+cupsJSONNew(array): PASS
+cupsJSONGetType(array): PASS (CUPS_JTYPE_ARRAY)
+cupsJSONNewString(array, 'foo'): PASS
+cupsJSONNewString(array, 'bar'): PASS
+cupsJSONNewNumber(array, 0.5): PASS
+cupsJSONNewNumber(array, 123456789123456789.0): PASS
+cupsJSONNew(array, null): PASS
+cupsJSONNewKey('object'): PASS
+cupsJSONNew(object): PASS
+cupsJSONNewKey(object, 'a'): PASS
+cupsJSONNewString(object, 'one'): PASS
+cupsJSONNewKey(object, 'b'): PASS
+cupsJSONNewNumber(object, 2): PASS
+cupsJSONGetCount(root): PASS (14)
+cupsJSONExportFile(root, 'test.json'): PASS
+cupsJSONImportFile('test.json'): PASS
+cupsJSONExportString(root): PASS
+cupsJSONImportString('{"string":"value","number":42,"null":null,"false":false,"true":true,"array":["foo","bar",0.5,123456789123456784,null],"object":{"a":"one","b":2}}'): PASS
+cupsJSONDelete(root): PASS
+cupsJSONImportURL('https://accounts.google.com/.well-known/openid-configuration', no last modified): PASS
+cupsJSONImportURL('https://accounts.google.com/.well-known/openid-configuration', since Wed, 14 Feb 2024 20:36:03 GMT): PASS (no change from last request)
+cupsJWTNew(NULL): PASS
+cupsJWTSetClaimNumber(CUPS_JWT_IAT): PASS
+cupsJWTSetClaimString(CUPS_JWT_SUB): PASS
+cupsJWTMakePrivateKey(HS256): PASS
+{"kty":"oct","k":"5gyAfJaLPZsYVLVPpwGXYYO8ZryU2bCKhCInH5hScrRqLthNSo5xgpKzTE53i4rsBwNofUAryyi76o99LcvTLw","kid":"oct1742355774"}
+cupsJWTSign(HS256): PASS
+cupsJWTHasValidSignature(HS256): PASS
+cupsJWTMakePrivateKey(RS256): PASS
+{"kty":"RSA","n":"xFFTDit294xh9xoEGpmsdHzixbJv6g8gFJd_jFENTMq-nXeFQvJfhn-Mcc0zEhXUcWKltaHdpPWbd66UFv4KHRkpwVqhRtFcq9iTYukH68HyJXnsE4BU2hrfGCqPuJByAC2-k6LMKdl8aY_1djz753C5nBbZt1lBXld6xM7PS5noU8OtS1XpIEm3-xt8A0_itTlmcTmEh8_xX09GK0RPFuLor58UBW1AhE2XYT8NGZLWR---dfO3fyR2OKar_x2JkrZtI0qgr1HBybR9hC7hxDRMZOEmxoag_6Xl-IsYSjGxtt1AK6XWUo4MvQgwqNj7une_HfPt5CT83cxMTFOti1vvFRkHRbgAifulTZYlNmuwPljdvoJ4ceMfl7KQCBinr8kfsq0qXYhUFckDL7Hr78LgaXT5TFSBJ63P51RFVi8v2U2M9arqpo2QuKKuUYI6D-hAAQ7Q_P2fOlrR4SmX3xa0uXoxyNqGJVSHhVOEWtRmFQ6XWmtn967A3r6K40Xb","e":"AQAB","d":"SRC5eDseDnktluGUaHAMethmME0-kN7rQi62dntOF2gX9JRgwS9i9TRwiYRlPxRn2oFsCkNBsl0E7VDI5hvLmNPeMgvwnWJbesvi4vu3CnxHCsKrZgCr0_cPVDe3AOqlu0JLPThogyTiRImjQkvlN1jBhAIPKsmp5hpp42jTRyBzkwVvcGv7lZxKQMeUasknJ-rCoV5WYJO4ko_3HjBQvURbdM2gjnqAeh1Eu5lTX1LCtMhaWx0HjOb9pw0FU7Bide3tqraTSqAxIkDMr-spU3pSiu-G2ji81Zc1OlIhvmKrr1yJnlP6rSpO5gvLfLb0lPeN-t0YvsOXyzeoEL6hCo3sUEE5yw2574Uqcrxy8_CFXAvyW52rBe0_K0mTZ4nzou_ZrZ_zpZAq1Q9BvjEHvH6YLLaMIG3Mzh1LslrCy9gl3a6uZE09Sa1lMHUy2iWsrbj2d9wMyc62L-Od8hQt6gkx1fmiZ_Jrr9aiilk8fowJTmShoxgnZM3d_891SQGF","p":"6ta-tSRIXM2KWQyhDGLU66fygJZaqE0Mhf5jWtbgi5rhTVGNF540EJA5DKRJHod0ZH3Ms3j9LKqWUCeRvgJZ6-OimXatX9uz8ItJak_8xcEkpcjafTo96emWuVwisrhbFGUTMoFCgfjTgpQsng2v7-Orokm4JVc_sEaulfbZBrepgtifEi5XYSZdSq6HmGkLtNMKixRSI0hiRjUfQIrncqaFKURVKDIrC8kOd4P3mS_aSSo-8udnoWJnwFOErPHf","q":"1gH5aeF-p6aLY3lfR_SB8pCfYSaTEUBoHNpg3MHFnza-QTr1Sk5aKF9MLa2CPkeLWz5fZXp01GvKUeNaJ_rLONXPN7_HqWa3_H_Np4OUpkLztHd9tyKon02mRWvjZqXghqLc6h3WxAFlExUHS2yOhRD5TriCYxeg3EzF1SQgdWiXvwhz4QuIcidieME1UudfF7ClA4Jzv2q1vAD8g25CB7OgLt2F1aKiaekRQQfq1wmVCH-oJYBasWVlyPQ4TAOF","dp":"TVA1qN0xFZx1l6uYucMv5gV8yOi3IAF9xf9iJl3nvw5WbmYS1Vu4OFvC7G6JxAtEPnFMGyoR78qZgfoE-VE82XQv6-YuXgiuzNqOaPm8dj6IGixuAhxSldfZT10N71jSY3yDPXVgt_l7aNnvdnl7GrcRonQys9htl1Mt1yFVgeilXfaDKDEpg0pmHFgpO_wZZoa0SeV-xS7na8XBbDZOzGgWHufoQTuDAHZI1QAVW9FtQ_kskDuu2mrTTXYxj95x","dq":"bJ8z6Pn7PzzZIvRH2E3SZzvgqX7axrbaIUr2PxZbKCSxDIrQVZbPTA6Sq9yVbucBZJ6T7P3qrqbHWij7aa9x1rcvJizBOspYOGDmEVBH8tuotsCvnnSJAdJ3wmSwVzl6bNvdJTdf-rx6gOT7ftzqub-TytD73S_xBeAxya08jFs6KkwwBNnFt6sl4ASw_BNTwMJ3_wAHn_CZrYMSp-MewKn7c84cUALsTLVvfIJ4QA0tB9NDlUVAwymkMAtFR8_B","qi":"uA3gBkmBTtniiVSxP-1r0oPDhofZJFnBjYW0wEWuOjUt00m12zPMXDzvIuEwTkSxdAEZ3UP54_1Q2fypMP-KW7QD4FdC_m41mDn7WKB1IaGF6VqLSD9s8l-XfkbroRjSEf4LXwXApiuzm6YnkmHl0fkgbV2fBeAkX3xpwjRc8fMEAyu4sa7rnh1xwzVJnvDFWscSur7o7OjHD_xo3PbsbsRTK2nmmtmgNSPlU_RxVXfUZlx0Nj_fpoTL-vzieJU0","kid":"RSA1742355775"}
+cupsJWTMakePublicKey(RS256): PASS
+{"kty":"RSA","n":"xFFTDit294xh9xoEGpmsdHzixbJv6g8gFJd_jFENTMq-nXeFQvJfhn-Mcc0zEhXUcWKltaHdpPWbd66UFv4KHRkpwVqhRtFcq9iTYukH68HyJXnsE4BU2hrfGCqPuJByAC2-k6LMKdl8aY_1djz753C5nBbZt1lBXld6xM7PS5noU8OtS1XpIEm3-xt8A0_itTlmcTmEh8_xX09GK0RPFuLor58UBW1AhE2XYT8NGZLWR---dfO3fyR2OKar_x2JkrZtI0qgr1HBybR9hC7hxDRMZOEmxoag_6Xl-IsYSjGxtt1AK6XWUo4MvQgwqNj7une_HfPt5CT83cxMTFOti1vvFRkHRbgAifulTZYlNmuwPljdvoJ4ceMfl7KQCBinr8kfsq0qXYhUFckDL7Hr78LgaXT5TFSBJ63P51RFVi8v2U2M9arqpo2QuKKuUYI6D-hAAQ7Q_P2fOlrR4SmX3xa0uXoxyNqGJVSHhVOEWtRmFQ6XWmtn967A3r6K40Xb","e":"AQAB","kid":"RSA1742355775"}
+cupsJWTSign(RS256): PASS
+cupsJWTHasValidSignature(RS256): PASS
+cupsJWTSign(RS384): PASS
+cupsJWTHasValidSignature(RS384): PASS
+cupsJWTSign(RS512): PASS
+cupsJWTHasValidSignature(RS512): PASS
+cupsJWTMakePrivateKey(ES256): PASS
+{"kty":"EC","crv":"P-256","x":"ymhyPUE6SyPwwSwKzFZfsbLUgYTc3bBTXwam4RazBKw","y":"aV76X1swPmZsV45y-hfnuSV_jwGIb1ISQFpz46M17mE","d":"gqtQo0-9ycpd3kdCWAccN7UXt4JfUR8pmjB-B7UNV3g","kid":"EC1742355775"}
+cupsJWTMakePublicKey(ES256): PASS
+{"kty":"EC","crv":"P-256","x":"ymhyPUE6SyPwwSwKzFZfsbLUgYTc3bBTXwam4RazBKw","y":"aV76X1swPmZsV45y-hfnuSV_jwGIb1ISQFpz46M17mE","kid":"EC1742355775"}
+cupsJWTSign(ES256): PASS
+cupsJWTHasValidSignature(ES256): PASS
+cupsJWTMakePrivateKey(ES384): PASS
+{"kty":"EC","crv":"P-384","x":"2ogfRwSLNSjeO-vd3RpS_t1ZrBUCZ-B0cf03LnPYj7VMURLwx7vdCQ1lS75m3fUr","y":"Xc2RWAlyD-_cJdKfwqjsKCs9RT711hA-eW8TXQFUV6PfuJ4VMhv1ALHPKbDwz8m4","d":"2uRlABUEsZuQYxnDf85HnXvItaIcV6R7J3l3A-_SQywthqOrvi2Ua5yE_eOWdcst","kid":"EC1742355775"}
+cupsJWTMakePublicKey(ES384): PASS
+{"kty":"EC","crv":"P-384","x":"2ogfRwSLNSjeO-vd3RpS_t1ZrBUCZ-B0cf03LnPYj7VMURLwx7vdCQ1lS75m3fUr","y":"Xc2RWAlyD-_cJdKfwqjsKCs9RT711hA-eW8TXQFUV6PfuJ4VMhv1ALHPKbDwz8m4","kid":"EC1742355775"}
+cupsJWTSign(ES384): PASS
+cupsJWTHasValidSignature(ES384): PASS
+cupsJWTMakePrivateKey(ES512): PASS
+{"kty":"EC","crv":"P-521","x":"OxgdOm3Q0ZBVS8V4geLjz6atZlDNzcKVMNXt7L6ZKrHoNfXnqE5E829jybwsaDRv9Y0Mxhk9a58_LZ54LBvTk00","y":"BmBjs4pqejDqlPPhW9T-AQ7jXdD3xAdbdEjXJwRdLcayw06kqfkr9TT2qlKXMYikC3QG5s1ULq8rbNd4pf45uF0","d":"AVO8oIv7jP9Ero3uwi7HHjlGHpmXf7VjPunLNjKu-Kf5JkprEnWSC1KSeM3HeVB23wYS74-Nj8s68QiNxtU0pg-2","kid":"EC1742355775"}
+cupsJWTMakePublicKey(ES512): PASS
+{"kty":"EC","crv":"P-521","x":"OxgdOm3Q0ZBVS8V4geLjz6atZlDNzcKVMNXt7L6ZKrHoNfXnqE5E829jybwsaDRv9Y0Mxhk9a58_LZ54LBvTk00","y":"BmBjs4pqejDqlPPhW9T-AQ7jXdD3xAdbdEjXJwRdLcayw06kqfkr9TT2qlKXMYikC3QG5s1ULq8rbNd4pf45uF0","kid":"EC1742355775"}
+cupsJWTSign(ES512): PASS
+cupsJWTHasValidSignature(ES512): PASS
+cupsJWTDelete(): PASS
+cupsJWTImportString("eyJ0eXAiOiJKV1QiLA0KICJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ.dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk", CUPS_JWS_FORMAT_COMPACT): PASS
+cupsJSONImportString("{"kty":"oct","k":"AyM1SysPpbyDfgZld3umj1qzKObwVMkoqQ-EstJQLr_T-1qS0gZH75aKtMN3Yj0iPS4hcgUuTwjAzZr1Z9CAow"}"): PASS
+cupsJWTHasValidSignature(): PASS
+cupsJWTImportString("eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ.cC4hiUPoj9Eetdgtv3hF80EGrhuB__dzERat0XF9g2VtQgr9PJbu3XOiZj5RZmh7AAuHIm4Bh-0Qc_lF5YKt_O8W2Fp5jujGbds9uJdbF9CUAr7t1dnZcAcQjbKBYNX4BAynRFdiuB--f_nZLgrnbyTyWzO75vRK5h6xBArLIARNPvkSjtQBMHlb1L07Qe7K0GarZRmB_eSN9383LcOLn6_dO--xi12jzDwusC-eOkHWEsqtFZESc6BfI7noOPqvhJ1phCnvWh6IeYI2w9QOYEUipUTI8np6LbgGY9Fs98rqVt5AXLIhWkWywlVmtVrBp0igcN_IoypGlUPQGe77Rw", CUPS_JWS_FORMAT_COMPACT): PASS
+cupsJSONImportString("{"kty":"RSA","n":"ofgWCuLjybRlzo0tZWJjNiuSfb4p4fAkd_wWJcyQoTbji9k0l8W26mPddxHmfHQp-Vaw-4qPCJrcS2mJPMEzP1Pt0Bm4d4QlL-yRT-SFd2lZS-pCgNMsD1W_YpRPEwOWvG6b32690r2jZ47soMZo9wGzjb_7OMg0LOL-bSf63kpaSHSXndS5z5rexMdbBYUsLA9e-KXBdQOS-UTo7WTBEMa2R2CapHg665xsmtdVMTBQY4uDZlxvb3qCo5ZwKh9kG4LT6_I5IhlJH7aGhyxXFvUK-DWNmoudF8NAco9_h9iaGNj8q2ethFkMLs91kzk2PAcDTW9gb54h4FRWyuXpoQ","e":"AQAB","d":"Eq5xpGnNCivDflJsRQBXHx1hdR1k6Ulwe2JZD50LpXyWPEAeP88vLNO97IjlA7_GQ5sLKMgvfTeXZx9SE-7YwVol2NXOoAJe46sui395IW_GO-pWJ1O0BkTGoVEn2bKVRUCgu-GjBVaYLU6f3l9kJfFNS3E0QbVdxzubSu3Mkqzjkn439X0M_V51gfpRLI9JYanrC4D4qAdGcopV_0ZHHzQlBjudU2QvXt4ehNYTCBr6XCLQUShb1juUO1ZdiYoFaFQT5Tw8bGUl_x_jTj3ccPDVZFD9pIuhLhBOneufuBiB4cS98l2SR_RQyGWSeWjnczT0QU91p1DhOVRuOopznQ","p":"4BzEEOtIpmVdVEZNCqS7baC4crd0pqnRH_5IB3jw3bcxGn6QLvnEtfdUdiYrqBdss1l58BQ3KhooKeQTa9AB0Hw_Py5PJdTJNPY8cQn7ouZ2KKDcmnPGBY5t7yLc1QlQ5xHdwW1VhvKn-nXqhJTBgIPgtldC-KDV5z-y2XDwGUc","q":"uQPEfgmVtjL0Uyyx88GZFF1fOunH3-7cepKmtH4pxhtCoHqpWmT8YAmZxaewHgHAjLYsp1ZSe7zFYHj7C6ul7TjeLQeZD_Yw: PASS
+cupsJWTHasValidSignature(): PASS
+cupsCreateCredentials(xxx-rsa-2048): PASS
+cupsJWTLoadCredentials(xxx-rsa-2048): PASS
+jwk="{"kty":"RSA","x5c":["MIIDqzCCApOgAwIBAgIEZ9o9PzANBgkqhkiG9w0BAQsFADBfMQswCQYDVQQGEwJVUzEVMBMGA1UEAwwMeHh4LXJzYS0yMDQ4MRUwEwYDVQQKDAx4eHgtcnNhLTIwNDgxEDAOBgNVBAgMB1Vua25vd24xEDAOBgNVBAcMB1Vua25vd24wHhcNMjUwMzE5MDM0MjU1WhcNMjUwMzIwMDM0MjU1WjBfMQswCQYDVQQGEwJVUzEVMBMGA1UEAwwMeHh4LXJzYS0yMDQ4MRUwEwYDVQQKDAx4eHgtcnNhLTIwNDgxEDAOBgNVBAgMB1Vua25vd24xEDAOBgNVBAcMB1Vua25vd24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCl1XZ4cUZNXkctQemRzFNwYOMmDSkamwFJ85vpk7fYZVcO6BsF/gbp+w2iioWCGMm1m5zjXDA00jYDW3C//lK6BpzlS6r1uTHaBVI0HKG2/URJv0eO7KKP7qpJ72aqcie52zNHrbNjoJmQlUZEH42L/MqjlURF36SHCMBp5TSX8yY2F522WMm8awDUyzyUAE0FNxsldbxJkegCzTO7jcHYDgWBtQOjP28dpdAj1RziFeS4SGeQKh0+GqSUnRqtJXKxn6UhJLTOlnK3wnpKjROFHpuB3R/hkA1uDYh1VhmxJ+Ai2BphZrHQXjbeCpygkFI/yCprtoeMDEYbS08D191ZAgMBAAGjbzBtMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAOBgNVHQ8BAf8EBAMCBaAwDwYDVR0TAQH/BAUwAwIBADArBgNVHREEJDAiggx4eHgtcnNhLTIwNDiCEnh4eC1yc2EtMjA0OC5sb2NhbDANBgkqhkiG9w0BAQsFAAOCAQEAXBaoaUYq2NWUE90D9/HxJcFyEz/nE03hNZ8+ofVc1sy1rAMoUZ2n1viloSX5JKbVVG/2icxbySb6t9t5/
+cupsJWTNew(NULL): PASS
+cupsJWTSetClaimNumber(CUPS_JWT_IAT): PASS
+cupsJWTSetClaimString(CUPS_JWT_SUB): PASS
+cupsJWTSign(RS256): PASS
+cupsJWTHasValidSignature(RS256): PASS
+cupsCreateCredentials(xxx-ecdsa-p256): PASS
+cupsJWTLoadCredentials(xxx-ecdsa-p256): PASS
+jwk="{"kty":"EC","x5c":["MIICKDCCAc6gAwIBAgIEZ9o9PzAKBggqhkjOPQQDAjBjMQswCQYDVQQGEwJVUzEXMBUGA1UEAwwOeHh4LWVjZHNhLXAyNTYxFzAVBgNVBAoMDnh4eC1lY2RzYS1wMjU2MRAwDgYDVQQIDAdVbmtub3duMRAwDgYDVQQHDAdVbmtub3duMB4XDTI1MDMxOTAzNDI1NVoXDTI1MDMyMDAzNDI1NVowYzELMAkGA1UEBhMCVVMxFzAVBgNVBAMMDnh4eC1lY2RzYS1wMjU2MRcwFQYDVQQKDA54eHgtZWNkc2EtcDI1NjEQMA4GA1UECAwHVW5rbm93bjEQMA4GA1UEBwwHVW5rbm93bjBWMBAGByqGSM49AgEGBSuBBAAKA0IABEJI/cbWx4YpeiS1xbL0yjV/hy1oFntFOcrb7X8lMKSmAvRmTgqByYQwMPjWoVVxJsVpJToD0bcdyZIeujqwyrajczBxMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAOBgNVHQ8BAf8EBAMCBaAwDwYDVR0TAQH/BAUwAwIBADAvBgNVHREEKDAmgg54eHgtZWNkc2EtcDI1NoIUeHh4LWVjZHNhLXAyNTYubG9jYWwwCgYIKoZIzj0EAwIDSAAwRQIgCTho4J/Ni3xPZ+aMzsRgC2Sashb2USlQgRPf6G2X6g0CIQCiZ35efZQshIGy4w/daDMtKhp25+vs/HOBdwcqWe3p/A=="],"crv":"P-256","x":"Qkj9xtbHhil6JLXFsvTKNX-HLWgWe0U5ytvtfyUwpKY","y":"AvRmTgqByYQwMPjWoVVxJsVpJToD0bcdyZIeujqwyrY","d":"I-q1GhvVloARXnHKBmnKHQtjCbEFiFC-Fuf1_wpx1cQ"}"
+cupsJWTNew(NULL): PASS
+cupsJWTSetClaimNumber(CUPS_JWT_IAT): PASS
+cupsJWTSetClaimString(CUPS_JWT_SUB): PASS
+cupsJWTSign(ES256): PASS
+cupsJWTHasValidSignature(ES256): PASS
+ls -al locale
+total 68
+drwxrwxr-x 15 abhishrestha abhishrestha  4096 Mar 19 03:42 .
+drwxrwxr-x  3 abhishrestha abhishrestha 12288 Mar 19 03:42 ..
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 ca
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 cs
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 da
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 de
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 en
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 es
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 fr
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 it
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 ja
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 pl
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 pt_BR
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 ru
+drwxrwxr-x  2 abhishrestha abhishrestha  4096 Mar 19 03:42 zh_CN
+cupsLangGet("zh_CN"): PASS
+cupsLangGet("zh_CN") again: PASS
+language->language: "zh_CN"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("否")
+_cupsLangString("Yes"): PASS ("是")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("it"): PASS
+cupsLangGet("it") again: PASS
+language->language: "it"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("No")
+_cupsLangString("Yes"): PASS ("Sì")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("da"): PASS
+cupsLangGet("da") again: PASS
+language->language: "da"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Nej")
+_cupsLangString("Yes"): PASS ("Ja")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("pt_BR"): PASS
+cupsLangGet("pt_BR") again: PASS
+language->language: "pt_BR"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Não")
+_cupsLangString("Yes"): PASS ("Sim")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("de"): PASS
+cupsLangGet("de") again: PASS
+language->language: "de"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Nein")
+_cupsLangString("Yes"): PASS ("Ja")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("es"): PASS
+cupsLangGet("es") again: PASS
+language->language: "es"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("No")
+_cupsLangString("Yes"): PASS ("Si")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("ca"): PASS
+cupsLangGet("ca") again: PASS
+language->language: "ca"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("No")
+_cupsLangString("Yes"): PASS ("Sí")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("cs"): PASS
+cupsLangGet("cs") again: PASS
+language->language: "cs"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Ne")
+_cupsLangString("Yes"): PASS ("Ano")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("ru"): PASS
+cupsLangGet("ru") again: PASS
+language->language: "ru"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Нет")
+_cupsLangString("Yes"): PASS ("Да")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("fr"): PASS
+cupsLangGet("fr") again: PASS
+language->language: "fr"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Non")
+_cupsLangString("Yes"): PASS ("Oui")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("pl"): PASS
+cupsLangGet("pl") again: PASS
+language->language: "pl"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("Nie")
+_cupsLangString("Yes"): PASS ("Tak")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("ja"): PASS
+cupsLangGet("ja") again: PASS
+language->language: "ja"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("いいえ")
+_cupsLangString("Yes"): PASS ("はい")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+cupsLangGet("en"): PASS
+cupsLangGet("en") again: PASS
+language->language: "en"
+_cupsEncodingName(language): "utf-8"
+_cupsLangString("No"): PASS ("No")
+_cupsLangString("Yes"): PASS ("Yes")
+_cupsStrScand("1"): 1.000000
+_cupsStrFormatd(1.000000): PASS
+_cupsStrScand("-1"): -1.000000
+_cupsStrFormatd(-1.000000): PASS
+_cupsStrScand("3"): 3.000000
+_cupsStrFormatd(3.000000): PASS
+_cupsStrScand("5.125"): 5.125000
+_cupsStrFormatd(5.125000): PASS
+ALL TESTS PASSED
+cupsParseOptions: PASS
+cupsEncodeOptions2: PASS
+ppdOpenFile(test.ppd): PASS
+ppdFindAttr(wildcard): PASS
+ppdFindNextAttr(wildcard): PASS
+ppdFindAttr(Foo): PASS
+ppdFindNextAttr(Foo): PASS
+ppdMarkDefaults: PASS
+ppdEmitString (defaults): PASS
+ppdEmitString (custom size and string): PASS
+cupsGetConflicts(InputSlot=Envelope): PASS
+ppdConflicts(): PASS (2)
+cupsResolveConflicts(InputSlot=Envelope): PASS (Resolved by changing PageSize)
+cupsResolveConflicts(No option/choice): PASS (Resolved by changing InputSlot)
+ppdInstallableConflict(): PASS
+ppdPageSizeLimits: PASS
+cupsMarkOptions(media=iso-a4): PASS
+cupsMarkOptions(media=na_letter_8.5x11in): PASS
+cupsMarkOptions(media=oe_letter-fullbleed_8.5x11in): PASS
+cupsMarkOptions(media=A4): PASS
+cupsMarkOptions(media=Custom.8x10in): PASS
+ppdLocalizeIPPReason(text): PASS
+ppdLocalizeIPPReason(http): PASS
+ppdLocalizeIPPReason(help): PASS
+ppdLocalizeIPPReason(file): PASS
+ppdLocalizeIPPReason(fr text): PASS
+ppdLocalizeIPPReason(zh_TW text): PASS
+ppdLocalizeMarkerName(bogus): PASS
+ppdLocalizeMarkerName(cyan): PASS
+ppdLocalizeMarkerName(fr cyan): PASS
+ppdLocalizeMarkerName(zh_TW cyan): PASS
+ppdOpenFile(test2.ppd): PASS
+ppdMarkDefaults: PASS
+ppdEmitString (defaults): PASS
+ppdConflicts(): PASS (1)
+cupsResolveConflicts(Quality=Photo): PASS (Unable to resolve)
+cupsResolveConflicts(No option/choice): PASS
+cupsResolveConflicts(loop test): PASS
+ppdInstallableConflict(): PASS
+ppdPageSizeLimits(default): PASS
+ppdPageSizeLimits(InputSlot=Manual): PASS
+ppdPageSizeLimits(Quality=Photo): PASS
+ppdPageSizeLimits(Quality=Photo): PASS
+_cupsRasterExecPS("setpagedevice"): PASS
+_cupsRasterExecPS("roll"): PASS
+_cupsRasterExecPS("dup index"): PASS
+_cupsRasterExecPS("%%Begin/EndFeature code"): PASS
+ppdOpenFile(test.ppd): PASS
+_ppdCacheCreateWithPPD(NULL, ppd): PASS
+_ppdCacheWriteFile(test.pwg): PASS
+_ppdCacheCreateWithFile(test.pwg): PASS
+_ppdCacheGetPageSize(keyword=Letter): PASS
+_ppdCacheGetPageSize(media=Letter): PASS
+_ppdCacheGetPageSize(keyword=A4): PASS
+_ppdCacheGetPageSize(media=A4): PASS
+_ppdCacheDestroy(pc): PASS
+pwgMediaForPWG("iso_a4_210x297mm"): PASS
+pwgMediaForPWG("roll_max_36.1025x3622.0472in"): PASS (91700x9199999)
+pwgMediaForPWG("disc_test_10x100mm"): PASS (10000x10000)
+pwgMediaForLegacy("na-letter"): PASS
+pwgMediaForPPD("4x6"): PASS
+pwgMediaForPPD("10x15cm"): PASS
+pwgMediaForPPD("Custom.10x15cm"): PASS
+pwgMediaForSize(29700, 42000): PASS
+pwgMediaForSize(9842, 19050): PASS (na_monarch_3.875x7.5in)
+pwgMediaForSize(9800, 19000): PASS (jpn_you6_98x190mm)
+Duplicate size test: PASS
+cupsRasterOpen(CUPS_RASTER_WRITE): PASS
+cupsRasterWriteHeader2(page 1): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 2): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 3): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 4): PASS
+cupsRasterWritePixels: PASS
+cupsRasterOpen(CUPS_RASTER_READ): PASS
+cupsRasterReadHeader2(page 1): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 2): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 3): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 4): PASS
+cupsRasterReadPixels: PASS
+cupsRasterOpen(CUPS_RASTER_WRITE_COMPRESSED): PASS
+cupsRasterWriteHeader2(page 1): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 2): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 3): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 4): PASS
+cupsRasterWritePixels: PASS
+cupsRasterOpen(CUPS_RASTER_READ): PASS
+cupsRasterReadHeader2(page 1): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 2): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 3): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 4): PASS
+cupsRasterReadPixels: PASS
+cupsRasterOpen(CUPS_RASTER_WRITE_PWG): PASS
+cupsRasterWriteHeader2(page 1): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 2): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 3): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 4): PASS
+cupsRasterWritePixels: PASS
+cupsRasterOpen(CUPS_RASTER_READ): PASS
+cupsRasterReadHeader2(page 1): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 2): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 3): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 4): PASS
+cupsRasterReadPixels: PASS
+cupsRasterOpen(CUPS_RASTER_WRITE_APPLE): PASS
+cupsRasterWriteHeader2(page 1): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 2): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 3): PASS
+cupsRasterWritePixels: PASS
+cupsRasterWriteHeader2(page 4): PASS
+cupsRasterWritePixels: PASS
+cupsRasterOpen(CUPS_RASTER_READ): PASS
+cupsRasterReadHeader2(page 1): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 2): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 3): PASS
+cupsRasterReadPixels: PASS
+cupsRasterReadHeader2(page 4): PASS
+cupsRasterReadPixels: PASS
+Tests finished at Wed Mar 19 03:42:55 UTC 2025...
